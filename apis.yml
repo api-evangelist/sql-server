@@ -1,0 +1,178 @@
+name: Microsoft SQL Server APIs
+description: A collection of APIs and interfaces for interacting with Microsoft SQL Server
+url: https://www.microsoft.com/sql-server
+type: Index
+tags:
+- Database
+- SQL
+- Relational Database
+- Microsoft
+- Data Management
+created: '2024'
+modified: '2024'
+apis:
+- name: SQL Server Database Engine API
+  description: Native database engine APIs for connecting and executing queries against SQL Server
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/sql/sql-server/
+  baseURL: ''
+  tags:
+  - Database Engine
+  - T-SQL
+  - Query Execution
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/sql/connect/
+  - type: OpenAPI
+    url: ''
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: SQL Server REST API
+  description: REST API for managing SQL Server resources in Azure
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/rest/api/sql/
+  baseURL: https://management.azure.com
+  tags:
+  - REST
+  - Azure
+  - Management
+  - Cloud
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/rest/api/sql/
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/sql/resource-manager/Microsoft.Sql/stable/2021-11-01/sql.json
+  - type: Swagger
+    url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/sql
+  contact:
+  - FN: Azure Support
+    email: azuresupport@microsoft.com
+- name: SQL Server Management Objects (SMO)
+  description: .NET API for programmatically managing SQL Server instances and databases
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/sql/relational-databases/server-management-objects-smo/
+  baseURL: ''
+  tags:
+  - SMO
+  - .NET
+  - Management
+  - Automation
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/sql/relational-databases/server-management-objects-smo/
+  - type: NuGet Package
+    url: https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects/
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: SQL Server Reporting Services (SSRS) API
+  description: REST API for managing and accessing SQL Server Reporting Services
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/sql/reporting-services/
+  baseURL: http://localhost/reports/api/v2.0
+  tags:
+  - Reporting
+  - REST
+  - SSRS
+  - Business Intelligence
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/sql/reporting-services/developer/rest-api
+  - type: OpenAPI
+    url: ''
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: ODBC Driver for SQL Server
+  description: ODBC driver API for connecting applications to SQL Server
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/sql/connect/odbc/
+  baseURL: ''
+  tags:
+  - ODBC
+  - Driver
+  - Connectivity
+  - Cross-Platform
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server
+  - type: Download
+    url: https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: JDBC Driver for SQL Server
+  description: JDBC driver for connecting Java applications to SQL Server
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/sql/connect/jdbc/
+  baseURL: ''
+  tags:
+  - JDBC
+  - Java
+  - Driver
+  - Connectivity
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server
+  - type: Download
+    url: https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server
+  - type: GitHub
+    url: https://github.com/microsoft/mssql-jdbc
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: SQL Server Analysis Services (SSAS) API
+  description: APIs for managing and querying SQL Server Analysis Services
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/analysis-services/
+  baseURL: ''
+  tags:
+  - SSAS
+  - OLAP
+  - Analysis
+  - Business Intelligence
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/analysis-services/instances/analysis-services-instance-management
+  - type: PowerShell Module
+    url: https://docs.microsoft.com/en-us/analysis-services/instances/install-windows/install-analysis-services
+  contact:
+  - FN: Microsoft Support
+    email: support@microsoft.com
+- name: Azure SQL Database REST API
+  description: REST API for managing Azure SQL Database resources
+  image: https://www.microsoft.com/sql-server/images/sql-server-logo.png
+  humanURL: https://docs.microsoft.com/en-us/azure/azure-sql/database/
+  baseURL: https://management.azure.com
+  tags:
+  - Azure
+  - Cloud
+  - PaaS
+  - REST
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/rest/api/sql/
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/sql/resource-manager/Microsoft.Sql/stable/2021-11-01/databases.json
+  contact:
+  - FN: Azure Support
+    email: azuresupport@microsoft.com
+maintainers:
+- FN: Microsoft Corporation
+  email: support@microsoft.com
+  url: https://www.microsoft.com
+common:
+- type: Getting Started
+  url: https://docs.microsoft.com/en-us/sql/sql-server/
+- type: Pricing
+  url: https://www.microsoft.com/en-us/sql-server/sql-server-2022-pricing
+- type: Support
+  url: https://support.microsoft.com/sql
+- type: Download
+  url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+- type: Blog
+  url: https://cloudblogs.microsoft.com/sqlserver/
+- type: Community
+  url: https://techcommunity.microsoft.com/t5/sql-server/ct-p/SQLServer
+include: []
