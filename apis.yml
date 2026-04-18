@@ -12,7 +12,9 @@ tags:
   - Relational Database
   - SQL
 created: '2024'
-modified: '2026-03-16'
+modified: '2026-04-18'
+specificationVersion: '0.19'
+access: 3rd-Party
 apis:
   - name: SQL Server Database Engine API
     description: >-
@@ -478,7 +480,7 @@ common:
     url: https://learn.microsoft.com/en-us/training/modules/introduction-to-sql-server-2022/
   - type: Certification
     url: https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/
-  - type: GitHub
+  - type: GitHubRepository
     url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/sql
   - type: ChangeLog
     url: https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022
@@ -486,4 +488,47 @@ common:
     url: https://www.microsoft.com/en-us/legal/terms-of-use
   - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
-include: []
+  - type: Features
+    data:
+      - name: T-SQL Query Engine
+        description: Full-featured relational database engine with comprehensive T-SQL support for queries, stored procedures, and functions.
+      - name: Always On Availability Groups
+        description: High availability and disaster recovery with automatic failover for mission-critical databases.
+      - name: In-Memory OLTP
+        description: Memory-optimized tables and natively compiled stored procedures for high-throughput transaction processing.
+      - name: PolyBase
+        description: Query external data sources including Hadoop, Azure Blob Storage, and Oracle using T-SQL.
+      - name: SQL Server Reporting Services
+        description: Enterprise reporting platform for creating, managing, and delivering paginated reports.
+      - name: SQL Server Integration Services
+        description: ETL platform for building data integration and transformation packages.
+      - name: Data API Builder
+        description: Generate REST and GraphQL endpoints from database tables and views without custom code.
+      - name: External REST Endpoint Invocation
+        description: Call external HTTPS REST APIs directly from T-SQL using sp_invoke_external_rest_endpoint.
+  - type: UseCases
+    data:
+      - name: Enterprise Data Management
+        description: Store and manage enterprise data with ACID compliance, security, and high availability.
+      - name: Business Intelligence
+        description: Build BI solutions with reporting services, analysis services, and data integration.
+      - name: Cloud Database Migration
+        description: Migrate on-premises SQL Server databases to Azure SQL Database or Managed Instance.
+      - name: Application Backend
+        description: Use SQL Server as the data tier for web, mobile, and enterprise applications.
+      - name: Data Warehousing
+        description: Build data warehouses with columnstore indexes, partitioning, and ETL pipelines.
+  - type: Integrations
+    data:
+      - name: Azure SQL Database
+        description: Cloud-hosted managed SQL database service with automatic backups and scaling.
+      - name: Power BI
+        description: Connect Power BI to SQL Server for interactive dashboards and reports.
+      - name: Azure Data Factory
+        description: Orchestrate data movement and transformation pipelines with SQL Server as source or destination.
+      - name: Entity Framework Core
+        description: Object-relational mapping for .NET applications with the SQL Server provider.
+      - name: Visual Studio
+        description: Develop and manage SQL Server databases with integrated tools in Visual Studio.
+      - name: Azure Synapse Analytics
+        description: Extend SQL Server data into cloud-scale analytics with Azure Synapse.
