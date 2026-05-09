@@ -3,11 +3,11 @@
   "feeds": [
     {
       "source": "https://cloudblogs.microsoft.com/sqlserver/",
-      "feed_url": "https://www.microsoft.com/en-us/sql-server/blog/feed/",
-      "saved": 10,
-      "title": "Microsoft SQL Server Blog"
+      "feed_url": "https://cloudblogs.microsoft.com/sqlserver/feed/",
+      "title": "Microsoft SQL Server Blog",
+      "saved": 0
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:37:06Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
