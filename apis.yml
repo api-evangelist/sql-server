@@ -451,6 +451,16 @@ apis:
     contact:
       - FN: Microsoft Support
         email: support@microsoft.com
+integrations:
+  - name: Microsoft
+  - name: Two people looking at a computer.
+  - name: This is placeholder text for
+  - name: IDC
+  - name: Nationwide
+  - name: RSA company
+  - name: Teleperformance
+  - name: A woman smiling at a laptop
+  - name: A man holding a laptop.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
@@ -532,3 +542,5 @@ common:
         description: Develop and manage SQL Server databases with integrated tools in Visual Studio.
       - name: Azure Synapse Analytics
         description: Extend SQL Server data into cloud-scale analytics with Azure Synapse.
+  - type: Integrations
+    url: https://www.microsoft.com/en-us/marketplace
