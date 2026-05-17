@@ -466,7 +466,7 @@ maintainers:
     email: kin@apievangelist.com
     url: https://apievangelist.com
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.microsoft.com/en-us/sql/sql-server/
   - type: Pricing
     url: https://www.microsoft.com/en-us/sql-server/sql-server-2022-pricing
@@ -480,7 +480,7 @@ common:
     url: https://techcommunity.microsoft.com/t5/sql-server/ct-p/SQLServer
   - type: Portal
     url: https://portal.azure.com
-  - type: Status
+  - type: StatusPage
     url: https://azure.microsoft.com/en-us/status/
   - type: Drivers
     url: https://learn.microsoft.com/en-us/sql/connect/sql-connection-libraries
