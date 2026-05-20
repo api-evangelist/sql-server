@@ -466,6 +466,8 @@ maintainers:
     email: kin@apievangelist.com
     url: https://apievangelist.com
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/msft-sql-server
   - type: GettingStarted
     url: https://docs.microsoft.com/en-us/sql/sql-server/
   - type: Pricing
