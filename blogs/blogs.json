@@ -2,12 +2,20 @@
   "repo": "sql-server",
   "feeds": [
     {
-      "source": "https://cloudblogs.microsoft.com/sqlserver/",
+      "source": "https://cloudblogs.microsoft.com/sqlserver/feed/",
       "feed_url": "https://cloudblogs.microsoft.com/sqlserver/feed/",
-      "title": "Microsoft SQL Server Blog",
-      "saved": 8
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.microsoft.com/en-us/sql-server/sql-server-downloads",
+      "feed_url": "https://www.microsoft.com/en-us/sql-server/sql-server-downloads",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 18,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
