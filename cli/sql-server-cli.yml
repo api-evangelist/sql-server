@@ -1,0 +1,73 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  https://learn.microsoft.com/en-us/sql/tools/overview-sql-tools and the
+  individual tool docs / GitHub repos.
+notes: >-
+  SQL Server ships several first-party command-line tools rather than one unified
+  CLI. sqlcmd (both the classic ODBC build and the modern Go rewrite), bcp, the
+  SqlPackage / DacFx tooling, the SqlServer PowerShell module, and the Data API
+  builder (dab) CLI are the primary command surfaces. Binaries are catalogued in
+  packages/.
+clis:
+- name: go-sqlcmd (sqlcmd)
+  description: Modern cross-platform CLI for SQL Server and Azure SQL, a Go rewrite of the classic sqlcmd built on go-mssqldb.
+  official: true
+  repo: https://github.com/microsoft/go-sqlcmd
+  docs: https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility
+  install:
+  - winget install sqlcmd
+  - brew install sqlcmd
+  - apt-get install sqlcmd
+  command_groups:
+  - name: sqlcmd query
+    description: Run Transact-SQL interactively or from scripts (-Q / -i / -o).
+  - name: sqlcmd create mssql
+    description: Create a local SQL Server instance in a container (Docker/Podman).
+  - name: sqlcmd start / stop / delete
+    description: Manage sqlcmd-created container instances.
+  - name: sqlcmd open ads / open vscode
+    description: Open the current context in Azure Data Studio or VS Code.
+  - name: sqlcmd config
+    description: Manage saved contexts, endpoints, and users.
+  key_flows:
+  - Spin up a throwaway SQL Server container and connect in one step.
+  - Run T-SQL scripts and export results in CI pipelines.
+- name: bcp
+  description: Bulk-copy utility for high-speed import/export between SQL Server and data files.
+  official: true
+  docs: https://learn.microsoft.com/en-us/sql/tools/bcp-utility
+  install:
+  - Part of the mssql-tools / Microsoft Command Line Utilities package.
+- name: SqlPackage
+  description: Cross-platform CLI for extracting, publishing, importing and exporting DACPAC/BACPAC database packages.
+  official: true
+  docs: https://learn.microsoft.com/en-us/sql/tools/sqlpackage/sqlpackage
+  install:
+  - dotnet tool install -g microsoft.sqlpackage
+  command_groups:
+  - name: sqlpackage /Action:Extract
+    description: Extract a schema-only DACPAC from a database.
+  - name: sqlpackage /Action:Publish
+    description: Deploy a DACPAC to a target database (incremental).
+  - name: sqlpackage /Action:Export / Import
+    description: Export/import a full BACPAC (schema + data).
+- name: SqlServer PowerShell module
+  description: PowerShell cmdlets (Invoke-Sqlcmd, Backup-SqlDatabase, ...) for managing instances and databases.
+  official: true
+  docs: https://learn.microsoft.com/en-us/powershell/module/sqlserver/
+  install:
+  - Install-Module -Name SqlServer
+- name: dab (Data API builder CLI)
+  description: Initialize, configure and run REST/GraphQL/MCP endpoints over SQL Server.
+  official: true
+  docs: https://learn.microsoft.com/en-us/azure/data-api-builder/command-line
+  install:
+  - dotnet tool install --global Microsoft.DataApiBuilder
+  command_groups:
+  - name: dab init
+    description: Create dab-config.json for a database (--database-type mssql).
+  - name: dab add
+    description: Expose a table/view/stored procedure as an entity with permissions.
+  - name: dab start
+    description: Run the REST, GraphQL and MCP endpoints (dab start --mcp-stdio for stdio MCP).

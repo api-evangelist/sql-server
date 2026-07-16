@@ -1,0 +1,57 @@
+generated: '2026-06-20'
+method: searched
+status: published
+source: https://learn.microsoft.com/en-us/azure/data-api-builder/mcp/overview
+official: true
+server:
+  name: SQL MCP Server
+  vendor: Microsoft
+  description: >-
+    Microsoft's official open-source MCP server for SQL Server, Azure SQL and
+    other databases. Built into Data API builder (DAB) 1.7+ (latest capabilities
+    in DAB 2.0). Self-hosted; exposes tables, views and stored procedures as a
+    controlled family of MCP tools through the DAB entity abstraction layer with
+    RBAC, caching, and OpenTelemetry. Intentionally does NOT do NL2SQL; uses a
+    deterministic NL2DAB model instead.
+  open_source: true
+  repo: https://github.com/Azure/data-api-builder
+  docs:
+  - https://learn.microsoft.com/en-us/azure/data-api-builder/mcp/overview
+  - https://learn.microsoft.com/en-us/sql/mcp/
+  - https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/
+  protocol_version: '2025-06-18'
+  transports:
+  - http        # streamable HTTP, e.g. http://localhost:5000/mcp
+  - stdio       # dab start --mcp-stdio
+  run:
+    init: dab init --database-type mssql --connection-string "<conn>" --host-mode development
+    start_http: dab start
+    start_stdio: dab start --mcp-stdio
+  supported_databases:
+  - SQL Server
+  - Azure SQL Database
+  - Azure SQL Managed Instance
+  - PostgreSQL
+  - MySQL
+  - Azure Cosmos DB
+tools:
+  note: >-
+    Seven built-in DML tools generated automatically from the DAB configuration
+    (the dml-tools system); every call respects entity RBAC/permissions. Stored
+    procedures may additionally be registered as named custom tools via
+    "custom-tool": true.
+  builtin:
+  - name: describe_entities
+    description: Describe the entities (tables/views/stored procedures) exposed to the agent.
+  - name: create_record
+    description: Create a record in an exposed entity.
+  - name: read_records
+    description: Read records from an exposed entity (results are cached).
+  - name: update_record
+    description: Update a record in an exposed entity.
+  - name: delete_record
+    description: Delete a record from an exposed entity.
+  - name: execute_entity
+    description: Execute a stored-procedure entity.
+  - name: aggregate_records
+    description: Aggregate records from an exposed entity.

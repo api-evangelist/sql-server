@@ -1,0 +1,116 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Microsoft SQL Server connectivity libraries documentation
+  (https://learn.microsoft.com/en-us/sql/connect/sql-connection-libraries) plus
+  public package registries (npm, PyPI, NuGet, Maven Central, pkg.go.dev,
+  RubyGems, Packagist, PowerShell Gallery).
+packages:
+- language: csharp
+  registry: nuget
+  name: Microsoft.Data.SqlClient
+  url: https://www.nuget.org/packages/Microsoft.Data.SqlClient
+  install: dotnet add package Microsoft.Data.SqlClient
+  official: true
+  description: Official .NET (ADO.NET) data provider for SQL Server and Azure SQL.
+- language: csharp
+  registry: nuget
+  name: Microsoft.SqlServer.SqlManagementObjects
+  url: https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects/
+  install: dotnet add package Microsoft.SqlServer.SqlManagementObjects
+  official: true
+  description: SQL Server Management Objects (SMO) .NET API for managing instances and databases.
+- language: csharp
+  registry: nuget
+  name: Microsoft.EntityFrameworkCore.SqlServer
+  url: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer
+  install: dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+  official: true
+  description: Entity Framework Core provider for SQL Server and Azure SQL.
+- language: javascript
+  registry: npm
+  name: mssql
+  url: https://www.npmjs.com/package/mssql
+  install: npm install mssql
+  official: true
+  source_repo: https://github.com/tediousjs/node-mssql
+  description: Node.js SQL Server client (built on the tedious TDS driver).
+- language: javascript
+  registry: npm
+  name: tedious
+  url: https://www.npmjs.com/package/tedious
+  install: npm install tedious
+  official: true
+  source_repo: https://github.com/tediousjs/tedious
+  description: Pure-JavaScript TDS implementation for connecting to SQL Server.
+- language: python
+  registry: pypi
+  name: mssql-python
+  url: https://pypi.org/project/mssql-python/
+  install: pip install mssql-python
+  official: true
+  source_repo: https://github.com/microsoft/mssql-python
+  description: Microsoft's first-party Python driver for SQL Server and Azure SQL.
+- language: python
+  registry: pypi
+  name: pyodbc
+  url: https://pypi.org/project/pyodbc/
+  install: pip install pyodbc
+  official: false
+  source_repo: https://github.com/mkleehammer/pyodbc
+  description: ODBC-based Python driver documented by Microsoft for SQL Server (uses the Microsoft ODBC Driver).
+- language: python
+  registry: pypi
+  name: pymssql
+  url: https://pypi.org/project/pymssql/
+  install: pip install pymssql
+  official: false
+  description: FreeTDS-based Python driver documented by Microsoft for SQL Server.
+- language: go
+  registry: pkg.go.dev
+  name: github.com/microsoft/go-mssqldb
+  url: https://pkg.go.dev/github.com/microsoft/go-mssqldb
+  install: go get github.com/microsoft/go-mssqldb
+  official: true
+  source_repo: https://github.com/microsoft/go-mssqldb
+  description: Microsoft Go driver for SQL Server using the TDS protocol.
+- language: java
+  registry: maven-central
+  name: com.microsoft.sqlserver:mssql-jdbc
+  url: https://central.sonatype.com/artifact/com.microsoft.sqlserver/mssql-jdbc
+  install: "<dependency><groupId>com.microsoft.sqlserver</groupId><artifactId>mssql-jdbc</artifactId></dependency>"
+  official: true
+  source_repo: https://github.com/microsoft/mssql-jdbc
+  description: Microsoft JDBC Driver for SQL Server.
+- language: php
+  registry: pecl
+  name: sqlsrv / pdo_sqlsrv
+  url: https://learn.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server
+  install: pecl install sqlsrv pdo_sqlsrv
+  official: true
+  source_repo: https://github.com/microsoft/msphpsql
+  description: Microsoft Drivers for PHP for SQL Server (SQLSRV and PDO_SQLSRV extensions).
+- language: ruby
+  registry: rubygems
+  name: tiny_tds
+  url: https://rubygems.org/gems/tiny_tds
+  install: gem install tiny_tds
+  official: false
+  source_repo: https://github.com/rails-sqlserver/tiny_tds
+  description: FreeTDS-based Ruby driver documented by Microsoft for connecting to SQL Server.
+- language: powershell
+  registry: powershell-gallery
+  name: SqlServer
+  url: https://www.powershellgallery.com/packages/SqlServer
+  install: Install-Module -Name SqlServer
+  official: true
+  source_repo: https://github.com/microsoft/SQLServerPSModule
+  description: SQL Server PowerShell module (cmdlets for managing instances and databases).
+- language: csharp
+  registry: nuget
+  name: Microsoft.DataApiBuilder
+  url: https://www.nuget.org/packages/Microsoft.DataApiBuilder
+  install: dotnet tool install --global Microsoft.DataApiBuilder
+  official: true
+  source_repo: https://github.com/Azure/data-api-builder
+  description: Data API builder (DAB) - generates REST/GraphQL/MCP endpoints for SQL Server and Azure SQL.

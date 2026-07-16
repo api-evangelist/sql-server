@@ -1,0 +1,32 @@
+generated: '2026-06-20'
+method: searched
+source: live probes of provider base hosts
+notes: >-
+  The SQL Server engine and drivers speak the TDS wire protocol, not HTTP, so
+  they expose no /.well-known surface. Probes cover the HTTP surfaces that back
+  the provider: the Microsoft corporate host (security.txt) and the Azure
+  Resource Manager control plane (management.azure.com) whose OAuth is fronted by
+  Microsoft Entra ID (login.microsoftonline.com).
+hosts:
+- host: https://www.microsoft.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: sql-server-security.txt
+- host: https://management.azure.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 400
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+- host: https://login.microsoftonline.com
+  note: Microsoft Entra ID token service used by the Azure SQL management REST API
+  documents:
+  - path: /common/.well-known/openid-configuration
+    status: 200
+- host: https://learn.microsoft.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404

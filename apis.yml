@@ -12,7 +12,7 @@ tags:
 - Relational Database
 - SQL
 created: '2024'
-modified: '2026-04-18'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 access: 3rd-Party
 apis:
@@ -470,6 +470,32 @@ maintainers:
 common:
 - type: DomainSecurity
   url: security/sql-server-domain-security.yml
+- type: Packages
+  url: packages/sql-server-packages.yml
+- type: WellKnown
+  url: well-known/sql-server-well-known.yml
+- type: SecurityTxt
+  url: well-known/sql-server-security.txt
+- type: MCPServer
+  url: mcp/sql-server-mcp.yml
+- type: LLMsTxt
+  url: llms/sql-server-llms.txt
+- type: Conformance
+  url: conformance/sql-server-conformance.yml
+- type: Lifecycle
+  url: lifecycle/sql-server-lifecycle.yml
+- type: ChangeLog
+  url: changelog/sql-server-changelog.yml
+- type: CLI
+  url: cli/sql-server-cli.yml
+- type: Conventions
+  url: conventions/sql-server-conventions.yml
+- type: Authentication
+  url: authentication/sql-server-authentication.yml
+- type: VulnerabilityDisclosure
+  url: security/sql-server-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/sql-server-trust-center.yml
 - type: LinkedIn
   url: https://www.linkedin.com/showcase/msft-sql-server
 - type: GettingStarted

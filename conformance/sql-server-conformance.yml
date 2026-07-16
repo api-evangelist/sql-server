@@ -1,0 +1,52 @@
+generated: '2026-06-20'
+method: derived
+source: >-
+  Derived from the provider catalog (apis.yml), Azure Resource Manager REST
+  conventions, and documented driver/engine standards. No local OpenAPI is
+  present (the Azure SQL specs are external), so standards are asserted from
+  documented behavior rather than a machine-read spec.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    The Azure SQL management REST APIs (management.azure.com) authenticate with
+    Microsoft Entra ID OAuth 2.0 bearer tokens (client credentials / auth code).
+- id: oidc
+  conforms: true
+  evidence: >-
+    Microsoft Entra ID publishes OpenID Connect discovery at
+    login.microsoftonline.com/common/.well-known/openid-configuration (probed 200).
+- id: odata
+  conforms: partial
+  evidence: >-
+    Azure Resource Manager REST APIs use OData-style query conventions ($filter,
+    $top, $skiptoken) on collection endpoints; not a full OData service.
+- id: graphql
+  conforms: true
+  evidence: >-
+    Data API builder generates a spec-compliant GraphQL endpoint over SQL Server
+    (graphql/sql-server-graphql.md).
+- id: mcp
+  conforms: true
+  evidence: >-
+    Official SQL MCP Server implements Model Context Protocol version 2025-06-18
+    (mcp/sql-server-mcp.yml).
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: https://www.microsoft.com/.well-known/security.txt (well-known/sql-server-security.txt)
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Azure Resource Manager uses its own {error:{code,message,details}} envelope,
+    not application/problem+json.
+- id: tls13
+  conforms: true
+  evidence: >-
+    SQL Server 2025 adds TLS 1.3 with TDS 8.0 strict encryption; management hosts
+    negotiate TLSv1.3 (security/sql-server-domain-security.yml).
+- id: fhir
+  conforms: false
+- id: scim
+  conforms: false
+- id: fapi
+  conforms: false

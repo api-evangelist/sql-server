@@ -1,0 +1,47 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview
+  and https://learn.microsoft.com/en-us/lifecycle/products/ (Microsoft Fixed
+  Lifecycle Policy)
+versioning:
+  scheme: named-release        # SQL Server 2016/2017/2019/2022/2025 (internal 13.x/14.x/15.x/16.x/17.x)
+  current: SQL Server 2025 (17.x)
+  azure_rest_versioning:
+    scheme: query-parameter
+    param: api-version
+    example: '2021-11-01'
+    note: Azure Resource Manager (management.azure.com) requires a dated api-version query parameter on every request.
+  docs: https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2025
+support_policy:
+  model: Microsoft Fixed Lifecycle Policy
+  phases: [mainstream, extended]
+  mainstream_note: Functional, performance, scalability, and security updates.
+  extended_note: Security updates only.
+  extended_security_updates: >-
+    Extended Security Updates (ESU) available for up to three additional years,
+    including free ESUs when migrated to Azure.
+  docs: https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview
+releases:
+- version: SQL Server 2025 (17.x)
+  mainstream_end: '2031-01-06'
+  extended_end: '2036-01-06'
+- version: SQL Server 2022 (16.x)
+  mainstream_end: '2027-01-11'
+  extended_end: '2032-01-12'
+- version: SQL Server 2019 (15.x)
+  mainstream_end: '2025-01-07'
+  extended_end: '2030-01-08'
+deprecation:
+  policy_url: https://learn.microsoft.com/en-us/sql/database-engine/deprecated-database-engine-features-in-sql-server-2025
+  breaking_changes_url: https://learn.microsoft.com/en-us/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2025
+  notes: >-
+    Deprecated/discontinued items are published per release. SQL Server 2025
+    discontinues Data Quality Services (DQS), Master Data Services (MDS), Synapse
+    Link, Web edition and Purview access policies; deprecates Hot add CPU and
+    lightweight pooling (fiber mode).
+  azure_sql_sunset_header: false
+sla:
+  azure_sql_database_url: https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services
+  note: Azure SQL Database publishes an availability SLA (up to 99.995% for zone-redundant Business Critical); on-premises SQL Server carries no vendor uptime SLA.
+status_page: https://azure.microsoft.com/en-us/status/

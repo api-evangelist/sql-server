@@ -1,0 +1,56 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Azure Resource Manager REST conventions
+  (https://learn.microsoft.com/en-us/rest/api/azure/) plus Data API builder REST
+  conventions (https://learn.microsoft.com/en-us/azure/data-api-builder/concept/rest/overview).
+notes: >-
+  SQL Server's primary interface is the T-SQL/TDS protocol, which is not HTTP and
+  has no REST conventions. The HTTP conventions below apply to the two REST
+  surfaces in this catalog: the Azure SQL management REST API (ARM) and the Data
+  API builder generated REST endpoints.
+azure_management_rest:
+  base_url: https://management.azure.com
+  authentication: OAuth 2.0 bearer (Microsoft Entra ID) — see authentication/sql-server-authentication.yml
+  versioning:
+    style: query-parameter
+    param: api-version
+    required: true
+    example: '2021-11-01'
+  pagination:
+    style: continuation-token
+    response_fields: [value, nextLink]
+    note: Collection responses return an array in "value" plus a "nextLink" URL for the next page.
+  filtering:
+    style: odata
+    params: ['$filter', '$top', '$skiptoken', '$expand']
+  request_tracing:
+    request_id_header: x-ms-request-id
+    client_request_id_header: x-ms-client-request-id
+    correlation_header: x-ms-correlation-request-id
+  error_envelope:
+    style: azure-arm
+    shape: '{ "error": { "code": "...", "message": "...", "details": [...] } }'
+    problem_json: false
+  rate_limit_signaling:
+    headers:
+    - x-ms-ratelimit-remaining-subscription-reads
+    - x-ms-ratelimit-remaining-subscription-writes
+    retry_after: Retry-After
+    see: rate-limits/sql-server-rate-limits.yml
+  async_operations:
+    pattern: Azure-AsyncOperation / Location header + 202 Accepted with polling.
+data_api_builder_rest:
+  docs: https://learn.microsoft.com/en-us/azure/data-api-builder/concept/rest/overview
+  pagination:
+    style: cursor
+    params: ['$first', '$after']
+    response_fields: [value, nextLink]
+  filtering:
+    params: ['$filter', '$select', '$orderby', '$first', '$after']
+  error_envelope:
+    shape: '{ "error": { "code": "...", "message": "...", "status": 4xx } }'
+cross_links:
+  authentication: authentication/sql-server-authentication.yml
+  lifecycle: lifecycle/sql-server-lifecycle.yml
+  rate_limits: rate-limits/sql-server-rate-limits.yml
