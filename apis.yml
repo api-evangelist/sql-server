@@ -1,3 +1,17 @@
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sql-server.png
 name: Microsoft SQL Server APIs
 description: >-
   A collection of APIs and interfaces for interacting with Microsoft SQL Server.
