@@ -6,13 +6,11 @@ official: true
 server:
   name: SQL MCP Server
   vendor: Microsoft
-  description: >-
-    Microsoft's official open-source MCP server for SQL Server, Azure SQL and
-    other databases. Built into Data API builder (DAB) 1.7+ (latest capabilities
-    in DAB 2.0). Self-hosted; exposes tables, views and stored procedures as a
-    controlled family of MCP tools through the DAB entity abstraction layer with
-    RBAC, caching, and OpenTelemetry. Intentionally does NOT do NL2SQL; uses a
-    deterministic NL2DAB model instead.
+  description: Microsoft's official open-source MCP server for SQL Server, Azure SQL and other databases.
+    Built into Data API builder (DAB) 1.7+ (latest capabilities in DAB 2.0). Self-hosted; exposes tables,
+    views and stored procedures as a controlled family of MCP tools through the DAB entity abstraction
+    layer with RBAC, caching, and OpenTelemetry. Intentionally does NOT do NL2SQL; uses a deterministic
+    NL2DAB model instead.
   open_source: true
   repo: https://github.com/Azure/data-api-builder
   docs:
@@ -21,8 +19,8 @@ server:
   - https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/
   protocol_version: '2025-06-18'
   transports:
-  - http        # streamable HTTP, e.g. http://localhost:5000/mcp
-  - stdio       # dab start --mcp-stdio
+  - http
+  - stdio
   run:
     init: dab init --database-type mssql --connection-string "<conn>" --host-mode development
     start_http: dab start
@@ -35,11 +33,9 @@ server:
   - MySQL
   - Azure Cosmos DB
 tools:
-  note: >-
-    Seven built-in DML tools generated automatically from the DAB configuration
-    (the dml-tools system); every call respects entity RBAC/permissions. Stored
-    procedures may additionally be registered as named custom tools via
-    "custom-tool": true.
+  note: 'Seven built-in DML tools generated automatically from the DAB configuration (the dml-tools system);
+    every call respects entity RBAC/permissions. Stored procedures may additionally be registered as named
+    custom tools via "custom-tool": true.'
   builtin:
   - name: describe_entities
     description: Describe the entities (tables/views/stored procedures) exposed to the agent.
@@ -55,3 +51,10 @@ tools:
     description: Execute a stored-procedure entity.
   - name: aggregate_records
     description: Aggregate records from an exposed entity.
+deployment:
+  mode: remote
+  endpoint: https://learn.microsoft.com/en-us/azure/data-api-builder/mcp/overview
+  verified: probed
+  probe: wall
+  checked: '2026-08-12'
+  source: catalog MCP census
