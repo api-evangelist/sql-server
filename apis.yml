@@ -27,7 +27,7 @@ tags:
 - SQL
 created: '2024'
 modified: '2026-06-20'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 access: 3rd-Party
 apis:
 - name: SQL Server Database Engine API
