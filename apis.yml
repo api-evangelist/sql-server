@@ -178,6 +178,11 @@ apis:
   tags:
   - Azure
   - Cloud
+  - Platform-as-a-Service
+  - REST
+  tags_raw:
+  - Azure
+  - Cloud
   - PaaS
   - REST
   properties:
@@ -195,6 +200,12 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/
   baseURL: https://management.azure.com
   tags:
+  - Azure
+  - Cloud
+  - Managed Instance
+  - Platform-as-a-Service
+  - REST
+  tags_raw:
   - Azure
   - Cloud
   - Managed Instance
@@ -235,6 +246,12 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/azure/data-api-builder/
   baseURL: ''
   tags:
+  - Azure
+  - Data API
+  - GraphQL
+  - Open-Source
+  - REST
+  tags_raw:
   - Azure
   - Data API
   - GraphQL
@@ -318,6 +335,12 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server
   baseURL: ''
   tags:
+  - Connectivity
+  - Driver
+  - JavaScript
+  - Node.js
+  - npm
+  tags_raw:
   - Connectivity
   - Driver
   - JavaScript
