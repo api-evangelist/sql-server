@@ -191,7 +191,7 @@ apis:
   tags:
   - Azure
   - Cloud
-  - Platform-as-a-Service
+  - PaaS
   - REST
   tags_raw:
   - Azure
@@ -216,7 +216,7 @@ apis:
   - Azure
   - Cloud
   - Managed Instance
-  - Platform-as-a-Service
+  - PaaS
   - REST
   tags_raw:
   - Azure
@@ -352,7 +352,7 @@ apis:
   - Driver
   - JavaScript
   - Node.js
-  - npm
+  - Npm
   tags_raw:
   - Connectivity
   - Driver
